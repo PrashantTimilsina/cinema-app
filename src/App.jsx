@@ -70,6 +70,7 @@ function App() {
               <Description
                 addedMovies={addedMovies}
                 setAddedMovies={setAddedMovies}
+                text={text}
               />
             }
           />
@@ -79,6 +80,7 @@ function App() {
               <AddedMovies
                 addedMovies={addedMovies}
                 setAddedMovies={setAddedMovies}
+          
               />
             }
           />

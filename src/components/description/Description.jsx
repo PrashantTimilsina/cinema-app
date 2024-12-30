@@ -3,7 +3,7 @@ import { useLocation } from "react-router";
 import Loading from "../loader/Loading";
 import { FaPlus } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
-function Description({ movies, addedMovies, setAddedMovies }) {
+function Description({ movies, addedMovies, setAddedMovies, text }) {
   const [description, setDescription] = useState(null);
   const location = useLocation();
   const imdbID = location?.state?.imdbID;
@@ -47,7 +47,7 @@ function Description({ movies, addedMovies, setAddedMovies }) {
               alt={description?.Title}
               className="mx-auto my-0 object-cover sm:h-96 sm:w-96"
             />
-            <a href="https://hdtodayz.to/">
+            <a href={`https://hdtodayz.to/search/${text}`}>
               <button className="mx-auto my-5 flex items-center justify-center rounded-md bg-[#dc2626] p-2 px-6 text-2xl text-[#fee2e2] shadow-lg transition-all duration-300 ease-in-out hover:bg-[#f87171] hover:font-bold hover:text-[#b91c1c]">
                 Watch now
               </button>
